@@ -1,0 +1,123 @@
+.works .content-box-body {
+    min-height: 690px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+.work,
+.add-work {
+    display: inline-block;
+    width: 183px;
+    margin-right: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.add-work {
+    width: 179px;
+    height: 125px;
+    border: 2px dashed #3ba8c0;
+    border-radius: 4px;
+    background: url('../img/add_new_prj.png') no-repeat 50% 35%;
+    background-color: #edf8fc;
+}
+
+.add-work-label {
+    display: block;
+    margin: 75px 0 0 0;
+    font-family: 'fira_sanslight';
+    font-size: 13px;
+    color: #3ba8c0;
+}
+
+.work:nth-child(3n) {
+    margin-right: 0;
+}
+
+.work-screenshot {
+    width: 179px;
+    height: 125px;
+    margin-bottom: 5px;
+    border: 2px solid #3ba8c0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.work.site1 .work-screenshot {
+    background: url('../img/site_1.jpg') no-repeat 50% 50%;
+}
+
+.work.site2 .work-screenshot {
+    background: url('../img/site_2.jpg') no-repeat 50% 50%;
+}
+
+.work.site3 .work-screenshot {
+    background: url('../img/site_3.jpg') no-repeat 50% 50%;
+}
+
+.work.site4 .work-screenshot {
+    background: url('../img/site_4.jpg') no-repeat 50% 50%;
+}
+
+
+.work-mask {
+    position: relative;
+    top: -125px;
+    display: block;
+    height: 100%;
+    background: rgba(1,108,164,0.75);
+}
+
+.work-screenshot:hover .work-mask{
+    top:0;
+    transition: all .2s;
+}
+
+.work-name {
+    position: relative;
+    right: -300px;
+    display: inline-block;
+    margin: 45px auto;
+    padding: 0 5px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.work-screenshot:hover .work-name{
+    right:0;
+    transition: all .5s;
+}
+
+.work-link {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-family: 'fira_sanslight_italic';
+    font-size: 13px;
+    color: #3ba8c0;
+}
+
+.work-link:active {
+    text-decoration: underline;
+    color: #3ba8c0;
+}
+
+.work-link:hover {
+    text-decoration: underline;
+    color: #3ba8c0;
+}
+
+.work-link:visited {
+    text-decoration: none;
+    color: #3ba8c0;
+}
+
+.work-description {
+    display: block;
+    padding: 0 5px;
+    line-height: 1.3;
+    font-family: 'fira_sanslight';
+}
