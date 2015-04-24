@@ -5,7 +5,7 @@
 .avatar-box {
     float: left;
     margin-left: 55px;
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 .avatar-wrapper {
@@ -33,7 +33,7 @@
 .about-me-item .lc,
 .about-me-item .rc {
     display: inline-block;
-    vertical-align: top;
+    line-height: 1.4;
 }
 
 .about-me-item .lc {
@@ -41,6 +41,7 @@
     font-family: 'fira_sansmedium';
     font-size: 17px;
     line-height: 23px;
+    vertical-align: top;
 }
 
 .skills-list {
