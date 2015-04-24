@@ -1,10 +1,7 @@
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,6 +9,15 @@ body {
     font-size: 15px;
     color: #37424d;
     background: url('../img/comppattern2.png') repeat;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
 }
 
 header {
@@ -144,6 +150,10 @@ main .content {
     border-bottom: 2px solid #eff3f7;
 }
 
+.main-menu .main-menu-item:last-child.active .main-menu-link {
+    border-radius: 0 0 4px 4px;
+}
+
 .main-menu .main-menu-item.active {
     position: relative;
     top: -2px;
@@ -243,7 +253,6 @@ footer {
     height: 80px;
     margin-top: -80px;
     background-color: #eff3f7;
-    z-index: 1000;
 }
 
 .footer-wrapper {

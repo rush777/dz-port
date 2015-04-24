@@ -1,0 +1,31 @@
+.form-contact {
+    height: 840px;
+}
+
+.captcha {
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    width: 189px;
+    height: 77px;
+    margin-right: 19px;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    background: #fbfcfd;
+    overflow: hidden;
+}
+
+.captcha-input {
+    width: 172px;
+    height: 30px;
+    margin-top: 20px;
+    font-family: 'fira_sanslight';
+}
+
+.input-area {
+    width: 382px;
+    height: 163px;
+    padding: 9px;
+    resize: none;
+    outline: none;
+}
