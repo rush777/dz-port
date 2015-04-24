@@ -279,6 +279,7 @@ footer {
     border: 0px;
     border-radius: 4px;
     margin-bottom: 24px;
+    overflow: hidden;
 }
 
 .content-box-header {
