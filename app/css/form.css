@@ -43,7 +43,7 @@
 .input {
     padding: 0 9px;
     border: 1px solid #48cbe8;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #48cbe8;
     background-color: #fbfcfd;
     outline: none;
@@ -78,7 +78,7 @@
     height: 77px;
     margin-right: 19px;
     border: 1px solid #48cbe8;
-    border-radius: 2px;
+    border-radius: 4px;
     background: #fbfcfd;
     overflow: hidden;
 }
