@@ -9,11 +9,13 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="bower/normalize.css/normalize.css">
+        <link rel="stylesheet" href="vendor/normalize/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="fonts/fira/fira.css">
         <link rel="stylesheet" href="fonts/Proxima-Nova/stylesheet.css">
         <script src="bower/modernizr/modernizr.js"></script>
+        <script src="vendor/modernizr/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -154,6 +156,12 @@
         <!-- JS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="vendor/jquery/jquery.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
+        <!--[if lt IE 9]>
+<script src="vendor/ie7/IE9.js"></script>
+<script src="vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script>$('input, textarea').placeholder();</script>
+<![endif]-->
     </body>
 </html>

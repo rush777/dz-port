@@ -21,6 +21,7 @@
     border-radius: 4px;
     background: url('../img/add_new_prj.png') no-repeat 50% 35%;
     background-color: #edf8fc;
+    cursor: pointer;
 }
 
 .add-work-label {
@@ -67,6 +68,11 @@
     display: block;
     height: 100%;
     background: rgba(1,108,164,0.75);
+}
+
+.no-opacity .work-mask {
+    background: #016ca4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 }
 
 .work-screenshot:hover .work-mask{

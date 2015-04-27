@@ -9,12 +9,14 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="bower/normalize.css/normalize.css">
+        <link rel="stylesheet" href="vendor/normalize/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/contact.css">
         <link rel="stylesheet" href="fonts/fira/fira.css">
         <link rel="stylesheet" href="fonts/Proxima-Nova/stylesheet.css">
         <script src="bower/modernizr/modernizr.js"></script>
+        <script src="vendor/modernizr/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -74,27 +76,33 @@
                         <section class="content-box form-contact clearfix">
                             <div class="form-header">У вас интересный проект? Напишите мне</div>
                             <div class="form-wrapper">
-                                <form action="#" name="contact-form">
+                                <form action="" name="contact-form">
                                     <div class="form-row clearfix">
-                                       <div class="form-col">
-                                        <label for="name" class="input-label">Имя</label>
-                                        <input type="text" class="input text-input" id="name" name="name" value="Как к вам обращаться" />
+                                        <div class="form-col">
+                                            <label for="name" class="input-label">Имя</label>
+
+                                            <input type="text" class="input text-input" id="name" name="name" placeholder="Как к вам обращаться" data-ttext="Вы не ввели имя" data-tpos="left"/>
+
                                         </div>
                                         <div class="form-col">
-                                        <label for="email" class="input-label">Email</label>
-                                        <input type="text" class="input text-input" id="email" name="email" value="Куда мне писать" />
+                                            <label for="email" class="input-label">Email</label>
+                                            <input type="text" class="input text-input" id="email" name="email" placeholder="Куда мне писать"  data-ttext="Вы не ввели email" data-tpos="right"/>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <label for="message" class="input-label">Сообщение</label>
-                                        <textarea name="message" id="message" cols="30" rows="10" class="input input-area">Кратко в чем суть</textarea>
+                                        <textarea name="message" id="message" cols="30" rows="10" class="input input-area" placeholder="Кратко в чем суть" data-ttext="Что вы от меня хотите?" data-tpos="left"></textarea>
                                     </div>
                                     <div class="form-row clearfix">
                                         <div class="div-label">Введите код, указанный на картинке</div>
-                                        <div class="captcha">
-                                            <img src="img/E0Ed3r.png" alt="captcha" class="img-captcha">
+                                        <div class="form-col">
+                                            <div class="captcha">
+                                                <img src="img/E0Ed3r.png" alt="captcha" class="img-captcha">
+                                            </div>
                                         </div>
-                                        <input type="text" class="input captcha-input" id="cap-answer" value="Введите код"/>
+                                        <div class="form-col">
+                                            <input type="text" class="input captcha-input" id="cap-answer" placeholder="Введите код" data-ttext="Вы не ввели код" data-tpos="right"/>
+                                        </div>
                                     </div>
                                     <div class="form-row clearfix">
                                         <input type="submit" class="form-button submit" value="Отправить" />
@@ -117,6 +125,12 @@
         <!-- JS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="vendor/jquery/jquery.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
+        <!--[if lt IE 9]>
+<script src="vendor/ie7/IE9.js"></script>
+<script src="vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script>$('input, textarea').placeholder();</script>
+<![endif]-->
     </body>
 </html>

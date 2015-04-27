@@ -5,6 +5,9 @@
     min-width: 100%;
     background: #58697a;
     opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
     z-index: 1000;
 }
 
@@ -57,11 +60,18 @@
 }
 
 .open-button {
+    position: absolute;
+    right: 0px;
+    top: 24px;
     width: 52px;
     height: 41px;
     border-radius: 0 4px 4px 0;
     background: url('../img/lightbox.png') 7px 0px no-repeat;
     background-color: #48cbe8;
+}
+
+.no-borderradius .open-button {
+    top: 26px;
 }
 
 .input-label {
@@ -81,6 +91,10 @@
 .img-input {
     width: 248px;
     border-radius: 4px 0 0 4px;
+}
+
+.img-input.error {
+    width: 249px;
 }
 
 .input-area {

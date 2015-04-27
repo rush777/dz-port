@@ -1,6 +1,6 @@
 .form-authorization {
     position: fixed;
-    margin-top: -242px;
+    margin-top: -270px;
     margin-left: -290px;
     top: 50%;
     left: 50%;
@@ -23,7 +23,11 @@
 }
 
 .form-row {
-    margin-bottom: 13px;
+    margin-bottom: 0px;
+}
+
+.tooltip {
+    top: 50%;
 }
 
 .input-label {
@@ -44,8 +48,9 @@
 .submit {
     width: 226px;
     height: 50px;
-    padding-right: 8px;
+    margin-bottom: 26px;
     margin-left: 99px;
+    padding-right: 8px;
     border-bottom: 1px solid #3dadc5;
     box-shadow: 0 3px 0 0 #3ba8c0;
     border-radius: 6px;

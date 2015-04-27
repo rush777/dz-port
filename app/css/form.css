@@ -15,10 +15,12 @@
 }
 
 .form-row {
+    position: relative;
     margin-bottom: 16px;
 }
 
 .form-col {
+    position: relative;
     float: left;
     width: 192px;
     margin-right: 18px;
@@ -40,10 +42,66 @@
     padding: 0 9px;
     border: 1px solid #48cbe8;
     border-radius: 4px;
-    color: #48cbe8;
     background-color: #fbfcfd;
     outline: none;
     font-size: 13px;
+}
+
+.input.error {
+    border: 1px solid #f97e76;
+    background-color: #fdd5d2;
+}
+
+::-webkit-input-placeholder {color:#48cbe8;}
+::-moz-placeholder          {color:#48cbe8;}/* Firefox 19+ */
+:-moz-placeholder           {color:#48cbe8;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#48cbe8;}
+
+.tooltip-left,
+.tooltip-right {
+    white-space: nowrap;
+    position: absolute;
+    top: 45%;
+    right: 100%;
+    margin-right: 12px;
+    color: #fff;
+    background: #F97E76;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 30px;
+    text-align: center;
+    /* visibility: hidden; */
+    border-radius: 2px;
+}
+
+.tooltip-right {
+    left: 100%;
+    right: inherit;
+    margin-left: 12px;
+}
+
+.tooltip-left:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -8px;
+    width: 0; height: 0;
+    border-left: 8px solid #F97E76;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.tooltip-right:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -8px;
+    width: 0; height: 0;
+    border-right: 8px solid #F97E76;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
 }
 
 .text-input {

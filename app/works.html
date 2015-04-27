@@ -9,6 +9,7 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="bower/normalize.css/normalize.css">
+        <link rel="stylesheet" href="vendor/normalize/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/works.css">
         <link rel="stylesheet" href="css/form.css">
@@ -16,6 +17,7 @@
         <link rel="stylesheet" href="fonts/fira/fira.css">
         <link rel="stylesheet" href="fonts/Proxima-Nova/stylesheet.css">
         <script src="bower/modernizr/modernizr.js"></script>
+        <script src="vendor/modernizr/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -30,20 +32,20 @@
                 <form action="#" name="add-project">
                     <div class="form-row clearfix">
                         <label for="name-field" class="input-label">Название проекта</label>
-                        <input type="text" id="name-field" name="name" class="input text-input" placeholder="Введите название">
+                        <input type="text" id="name-field" name="name" class="input text-input" placeholder="Введите название" data-ttext="Вы не ввели название" data-tpos="left">
                     </div>
                     <div class="form-row clearfix">
                         <label for="image-field" class="input-label">Картинка проекта</label>
-                        <input type="text" id="image-field" name="image" class="input text-input img-input" placeholder="Загрузите изображение">
+                        <input type="text" id="image-field" name="image" class="input text-input img-input" placeholder="Загрузите изображение" data-ttext="Вы не выбрали изображение" data-tpos="left">
                         <a href="#" class="button open-button">Открыть</a>
                     </div>
                     <div class="form-row clearfix">
                         <label for="url-field" class="input-label">URL проекта</label>
-                        <input type="text" id="url-field" name="project-url" class="input text-input" placeholder="Добавьте ссылку">
+                        <input type="text" id="url-field" name="project-url" class="input text-input" placeholder="Добавьте ссылку" data-ttext="Вы не добавили ссылку" data-tpos="left">
                     </div>
                     <div class="form-row clearfix">
                         <label for="message" class="input-label">Описание</label>
-                        <textarea name="message" id="message" cols="30" rows="10" class="input input-area">Пара слов о вашем проекте</textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" class="input input-area" placeholder="Пара слов о вашем проекте" data-ttext="Описание проекта обязательно" data-tpos="left"></textarea>
                     </div>
                     <div class="form-row clearfix">
                         <input type="submit" class="form-button submit" value="Добавить" />
@@ -141,14 +143,11 @@
                                     <a href="#" class="work-link">www.site.ru</a>
                                     <div class="work-description">Информация о проекте 4 превью 2 строки....</div>
                                 </div>
-                                <a href="#" class="add-work-link">
-                                    <div class="add-work">
-                                        <span class="add-work-label">Добавить проект</span>
-                                    </div>
-                                </a>
+                                <div class="add-work">
+                                    <span class="add-work-label">Добавить проект</span>
+                                </div>
                             </div>
                         </section>
-
                     </article>
                 </div>
             </main>
@@ -163,6 +162,12 @@
         <!-- JS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="vendor/jquery/jquery.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
+        <!--[if lt IE 9]>
+<script src="vendor/ie7/IE9.js"></script>
+<script src="vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script>$('input, textarea').placeholder();</script>
+<![endif]-->
     </body>
 </html>
