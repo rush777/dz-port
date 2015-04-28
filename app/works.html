@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="css/works.css">
         <link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="bower/jquery-file-upload/css/jquery.fileupload.css">
+        <link rel="stylesheet" href="bower/jquery-file-upload/css/jquery.fileupload-ui.css">
         <link rel="stylesheet" href="fonts/fira/fira.css">
         <link rel="stylesheet" href="fonts/Proxima-Nova/stylesheet.css">
         <script src="bower/modernizr/modernizr.js"></script>
@@ -36,8 +38,9 @@
                     </div>
                     <div class="form-row clearfix">
                         <label for="image-field" class="input-label">Картинка проекта</label>
-                        <input type="text" id="image-field" name="image" class="input text-input img-input" placeholder="Загрузите изображение" data-ttext="Вы не выбрали изображение" data-tpos="left">
+                        <input type="text" id="image-url-field" name="image-url" class="input image-url-input" placeholder="Загрузите изображение" data-ttext="Вы не выбрали изображение" data-tpos="left" readonly>
                         <a href="#" class="button open-button">Открыть</a>
+                        <input type="file" id="image-field" name="image" class="input-hidden" accept="image/*">
                     </div>
                     <div class="form-row clearfix">
                         <label for="url-field" class="input-label">URL проекта</label>

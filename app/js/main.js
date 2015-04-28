@@ -4,6 +4,8 @@ var LightBox = (function(){
         $('.add-work').on('click', _showLightBox);
         $('.close-button').on('click', _hideLightBox);
         $('.add-project-overlay').on('click', _hideLightBox);
+        $('.open-button').on('click', _showOpenDialog);
+        $('#image-field').on('change', _insertFileName);
     }
 
     function _showLightBox(ev){
@@ -19,6 +21,30 @@ var LightBox = (function(){
         $('.add-project-form').hide();
     }
 
+    function _showOpenDialog(ev){
+        ev.preventDefault;
+        $('#image-field').click();
+    }
+    
+    function _insertFileName(ev){
+        var file = ev.target.files[0],
+            insertTo = $('#image-url-field');
+        
+        insertTo.val(file.name);
+        _clearTooltip(insertTo);
+    }
+    
+    function _clearTooltip(field) {
+        var container = field.parent(),
+            tooltip = container.find('.tooltip');
+
+        if (field.hasClass('error')) {
+            field.removeClass('error');
+            tooltip.remove();
+        }
+
+    }
+    
     return {
         init: function(){
             _setUpListners();
@@ -129,6 +155,9 @@ var FormSend = (function(){
         },
         clearForm: function () {
             _clearForm();
+        },
+        clearToolTip: function () {
+            _clearTooltip();
         }
     }
 
