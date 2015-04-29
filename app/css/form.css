@@ -3,6 +3,7 @@
     margin-bottom: 46px;
     background: #48cbe8;
     border-bottom: 17px solid #67dffa;
+    border-radius: 4px 4px 0 0;
     text-align: center;
     line-height: 125px;
     font-size: 27px;
@@ -39,7 +40,7 @@
 }
 
 .input {
-    padding: 0 9px;
+    padding: 9px;
     border: 1px solid #48cbe8;
     border-radius: 4px;
     background-color: #fbfcfd;
@@ -106,7 +107,7 @@
 
 .text-input {
     width: 172px;
-    height: 39px;
+    height: 21px;
 }
 
 .div-label {

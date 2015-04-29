@@ -25,15 +25,16 @@ var LightBox = (function(){
         ev.preventDefault;
         $('#image-field').click();
     }
-    
+
     function _insertFileName(ev){
-        var file = ev.target.files[0],
-            insertTo = $('#image-url-field');
-        
-        insertTo.val(file.name);
+        var file = ev.target.value,
+            insertTo = $('#image-url-field'),
+            filename = file.split('\\').pop();
+
+        insertTo.val(filename);
         _clearTooltip(insertTo);
     }
-    
+
     function _clearTooltip(field) {
         var container = field.parent(),
             tooltip = container.find('.tooltip');
@@ -44,7 +45,7 @@ var LightBox = (function(){
         }
 
     }
-    
+
     return {
         init: function(){
             _setUpListners();
@@ -65,7 +66,7 @@ var FormSend = (function(){
         ev.preventDefault();
 
         var form = $(this);
-        
+
         if (form.attr('name') == 'add-project') {
             url = '/project.php';
         } else if (form.attr('name') == 'auth-form') {
@@ -73,7 +74,7 @@ var FormSend = (function(){
         } else if (form.attr('name') == 'contact-form') {
             url = '/contact.php';
         }
-        
+
         if (_validation($(this))) {
             var formSend = _ajaxForm(form, url);
             formSend.done(function(answer){
@@ -99,7 +100,7 @@ var FormSend = (function(){
     }
 
     function _validation(form){
-        var fields = form.find('.input'),
+        var fields = form.find('input[type="text"], textarea'),
             result = true;
 
         $.each(fields, function(index, val) {
@@ -130,8 +131,8 @@ var FormSend = (function(){
                 container = field.parent(),
                 tooltip = container.find('.tooltip');
 
-            field.removeClass('error');
             field.val('');
+            field.removeClass('error');
             tooltip.remove();
         });
     }
