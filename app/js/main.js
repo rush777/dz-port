@@ -100,7 +100,7 @@ var FormSend = (function(){
     }
 
     function _validation(form){
-        var fields = form.find('input[type="text"], textarea'),
+        var fields = form.find('.input'),
             result = true;
 
         $.each(fields, function(index, val) {
@@ -124,7 +124,7 @@ var FormSend = (function(){
 
     function _clearForm() {
         var form = $('form'), 
-            fields = form.find('.input');
+            fields = form.find('input[type="text"], input[type="file"], textarea');
 
         $.each(fields, function(index, val) {
             var field = $(val),
