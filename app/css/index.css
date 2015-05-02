@@ -59,9 +59,11 @@
     margin-top: 7px;
     padding: 1px 13px;
     border-radius: 2px;
+    background: #3ba8c0;
     background: -moz-linear-gradient( 90deg, rgb(46,140,162) 0%, rgb(46,140,162) 52%, rgb(59,168,192) 53%, rgb(59,168,192) 100%);
-  background: -webkit-linear-gradient( 90deg, rgb(46,140,162) 0%, rgb(46,140,162) 52%, rgb(59,168,192) 53%, rgb(59,168,192) 100%);
-  background: -ms-linear-gradient( 90deg, rgb(46,140,162) 0%, rgb(46,140,162) 52%, rgb(59,168,192) 53%, rgb(59,168,192) 100%);
+    background: -webkit-linear-gradient( 90deg, rgb(46,140,162) 0%, rgb(46,140,162) 52%, rgb(59,168,192) 53%, rgb(59,168,192) 100%);
+    background: -ms-linear-gradient( 90deg, rgb(46,140,162) 0%, rgb(46,140,162) 52%, rgb(59,168,192) 53%, rgb(59,168,192) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 );
     font-family: 'proxima_novasemibold';
     font-size: 14px;
     color: #fff;
