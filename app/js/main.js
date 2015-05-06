@@ -132,6 +132,7 @@ var FormSend = (function(){
                 tooltip = container.find('.tooltip');
 
             field.val('');
+            field.focus().blur();
             field.removeClass('error');
             tooltip.remove();
         });
